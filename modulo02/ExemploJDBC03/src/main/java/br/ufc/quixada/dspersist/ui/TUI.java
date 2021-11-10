@@ -9,7 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Principal {
+public class TUI {
     public static void main(String[] args) {
         ContatoDAO contatoDAO = new ContatoDAOJDBC();
         List<Contato> contatos = contatoDAO.findAll();

@@ -7,7 +7,7 @@ import br.ufc.quixada.dspersist.model.Contato;
 import javax.swing.*;
 import java.util.List;
 
-public class Principal2 {
+public class GUI {
     public static void main(String[] args) {
         ContatoDAO contatoDAO = new ContatoDAOJDBC();
         List<Contato> contatos = contatoDAO.findAll();
