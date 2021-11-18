@@ -72,7 +72,7 @@ public class ClienteJDBCDAO implements ClienteDAO {
 		String sql = "select id, cpf, nome, fone, renda from clientes where cpf = :cpf_";
 		SqlParameterSource namedParameters = new MapSqlParameterSource().addValue("cpf_", cpf);
 		List<Cliente> result = jdbcTemplate.query(sql, namedParameters, (rs, rowNum) -> map(rs));
-		return result.get(0);
+		return result.isEmpty() ? null : result.get(0);
 	}
 
 	public List<Cliente> findByNome(String str) {
