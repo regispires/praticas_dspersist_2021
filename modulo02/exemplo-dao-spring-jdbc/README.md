@@ -27,7 +27,7 @@ create database contatos;
 
 create table clientes (
   id serial primary key,
-  cpf varchar(11),
+  cpf varchar(11) unique,
   nome varchar(50),
   fone varchar(11),
   renda decimal(10,2)
