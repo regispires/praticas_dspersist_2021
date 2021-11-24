@@ -1,19 +1,19 @@
-package br.ufc.quixada;
+package br.ufc.quixada.ui;
 
 import java.util.List;
 
 import javax.swing.JOptionPane;
 
 import br.ufc.quixada.dao.ClienteDAO;
-import br.ufc.quixada.dao.ClienteJDBCDAO;
 import br.ufc.quixada.entity.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan("br.ufc.quixada")
 public class Principal implements CommandLineRunner {
 	@Autowired
 	private ClienteDAO baseClientes;

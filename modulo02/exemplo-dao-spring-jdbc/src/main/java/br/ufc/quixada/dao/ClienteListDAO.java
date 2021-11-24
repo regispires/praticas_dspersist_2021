@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.ufc.quixada.entity.Cliente;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class ClienteListDAO implements ClienteDAO {
 
 	private List<Cliente> clientes;
